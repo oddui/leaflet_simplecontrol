@@ -11,6 +11,12 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.ie.css" /><![endif]-->
+    <link rel="stylesheet" href="stylesheets/leaflet.plugin.simplecontrol.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
+    <script src="javascripts/leaflet.plugin.simplecontrol.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -32,6 +38,23 @@
 
 <p>Provides Mapbox styled controls(zoomin, zoomout and locate) for Leaflet.</p>
 
+    <div id="map" style="height: 300px;"></div>
+
+    <script type="text/javascript">
+      var mapbox = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/mapbox.mapbox-light/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: 'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+      });
+      var map = new L.Map('map', {
+        layers: [mapbox],
+        center: new L.LatLng(-33.857, 151.215),
+        zoom: 4,
+        zoomControl: false
+      });
+      map.addControl(new L.Control.SimpleControl());
+    </script>
+
+<p></p>
 <h3>Usage</h3>
 
 <p>Create a new leaflet map without zoomControl, then add simplecontrol to the map</p>
