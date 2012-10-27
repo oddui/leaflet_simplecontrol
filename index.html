@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Leaflet simplecontrol by oddui</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Leaflet simplecontrol</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/oddui/leaflet_simplecontrol" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/oddui/leaflet_simplecontrol/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/oddui/leaflet_simplecontrol/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>Leaflet simplecontrols</h1>
+
+<p>Provides Mapbox styled controls(zoomin, zoomout and locate) for Leaflet.</p>
+
+<h3>Usage</h3>
+
+<p>Create a new leaflet map without zoomControl, then add simplecontrol to the map</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">L</span><span class="p">.</span><span class="nx">Map</span><span class="p">(...);</span>
+<span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="k">new</span> <span class="nx">L</span><span class="p">.</span><span class="nx">Control</span><span class="p">.</span><span class="nx">SimpleControl</span><span class="p">());</span>
+</pre></div>
+
+<h3>Defaults</h3>
+
+<p>By default the simplecontrol enables some nice defaults for you:</p>
+
+<ul>
+<li>
+<strong>locationControl</strong>: Enables location control.</li>
+<li>
+<strong>locationSetView</strong>: Automatically sets the map view to the user location with respect to detection accuracy.</li>
+</ul><p>You can disable the location control in the options when you create the simplecontrol:</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">simpleControl</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">L</span><span class="p">.</span><span class="nx">Control</span><span class="p">.</span><span class="nx">SimpleControl</span><span class="p">({</span>
+  <span class="nx">locationControl</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>Options</h3>
+
+<ul>
+<li>
+<strong>position</strong>: The initial position of simplecontrol (one of the map corners).</li>
+</ul><p>location options</p>
+
+<ul>
+<li>
+<strong>locationControl</strong>: If set to true location control will be enabled else disabled. Defaults to true.</li>
+<li>
+<strong>locationSetView</strong>: If set to true it automatically sets the map view to the user location with respect to detection accuracy. Defaults to true.</li>
+<li>
+<strong>locationMaxZoom</strong>: The maximum zoom for automatic view setting when using locationSetView option..</li>
+<li>
+<strong>locationMarkerIcon</strong>: The icon for the user's position marker.</li>
+<li>
+<strong>locationMarkerPopup</strong>: The popup for the user's postion marker.</li>
+</ul><h3>License</h3>
+
+<p>Leaflet simplecontrols is free software, and may be redistributed under the MIT-LICENSE.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/oddui">oddui</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
